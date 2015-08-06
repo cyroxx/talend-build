@@ -1,0 +1,15 @@
+script:
+  - mkdir talend
+  - cd talend
+  - git clone https://github.com/Talend/studio-se-master.git studio-se-master
+  - git clone https://github.com/Talend/tcommon-studio-se.git tcommon-studio-se
+  - git clone https://github.com/Talend/tbd-studio-se tbd-studio-se
+  - git clone https://github.com/Talend/tdi-studio-se tdi-studio-se
+  - git clone https://github.com/Talend/tdq-studio-se tdq-studio-se
+  - git clone https://github.com/Talend/tesb-studio-se tesb-studio-se
+  - git clone https://github.com/Talend/tmdm-common tmdm-common
+  - git clone https://github.com/Talend/tmdm-studio-se tmdm-studio-se
+  - cd studio-se-master/talend.studio.parent.pom
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - cd ..
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
