@@ -1,3 +1,4 @@
+before_install: export MAVEN_OPTS='-Xmx8000m -XX:MaxPermSize=512m -XX:-UseConcMarkSweepGC' > ~/.mavenrc
 script:
   - mkdir talend
   - cd talend
